@@ -8,7 +8,7 @@ MODEL_GPT_4_VISION = "gpt-4-vision-preview"
 async def stream_openai_response(
     messages, api_key: str, callback: Callable[[str], Awaitable[None]]
 ):
-    client = AsyncOpenAI(api_key=api_key)
+    client = AsyncOpenAI(api_key=api_key, base_url="https://api.ohmygpt.com/v1")
 
     model = MODEL_GPT_4_VISION
 

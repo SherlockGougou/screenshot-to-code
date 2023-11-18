@@ -21,7 +21,7 @@ async def process_tasks(prompts, api_key):
 
 
 async def generate_image(prompt, api_key):
-    client = AsyncOpenAI(api_key=api_key)
+    client = AsyncOpenAI(api_key=api_key, base_url="https://api.ohmygpt.com/v1")
     image_params = {
         "model": "dall-e-3",
         "quality": "standard",
